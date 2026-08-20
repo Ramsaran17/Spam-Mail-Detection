@@ -1,52 +1,112 @@
-# Spam Mail Prediction
+Yes. Keep the README focused on what a recruiter or interviewer actually needs. Copy the entire block below and replace your current `README.md`.
 
-## Overview
-This repository contains a Jupyter Notebook for classifying emails as spam or non-spam using machine learning. The notebook covers data preprocessing, feature extraction, model training, and evaluation.
+````markdown
+# Spam Mail Detection
+
+A machine learning web application that classifies email messages as **Spam** or **Ham (Not Spam)**.
+
+The project uses a TF-IDF vectorizer and a Logistic Regression model for text classification. A Flask API connects the trained model with a React frontend, allowing users to enter a message and get an instant prediction.
+
+## Tech Stack
+
+- React.js
+- Vite
+- Python
+- Flask
+- Flask-CORS
+- Scikit-learn
+- TF-IDF Vectorization
+- Logistic Regression
 
 ## Features
-- Data loading and preprocessing
-- Text feature extraction (TF-IDF, Count Vectorization, etc.)
-- Model training and evaluation
-- Hyperparameter tuning
 
-## Requirements
-To run this notebook, install the required dependencies:
+- Spam and ham email classification
+- Real-time prediction through a web interface
+- REST API built with Flask
+- React-based responsive frontend
+- Saved trained model and vectorizer for prediction
+
+## Project Structure
+
+```text
+Spam-Mail-detection/
+├── app.py
+├── model.pkl
+├── vectorizer.pkl
+├── requirements.txt
+└── frontend/
+    ├── package.json
+    └── src/
+        ├── App.jsx
+        ├── App.css
+        └── main.jsx
+````
+
+## How It Works
+
+```text
+User Message
+     ↓
+React Frontend
+     ↓
+Flask API
+     ↓
+TF-IDF Vectorizer
+     ↓
+Logistic Regression Model
+     ↓
+Spam / Ham Prediction
+```
+
+## Run Locally
+
+### Backend
 
 ```bash
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
+python app.py
 ```
 
-Alternatively, install the necessary libraries manually:
+Backend runs at:
+
+```text
+http://127.0.0.1:5000
+```
+
+### Frontend
+
+Open another terminal:
 
 ```bash
-pip install numpy pandas matplotlib seaborn scikit-learn nltk
+cd frontend
+npm install
+npm run dev
 ```
 
-## Usage
-1. Clone this repository:
+Frontend runs at:
 
-```bash
-git clone https://github.com/Shaajithsalihundam/Spam-Mail-Prediction
-cd spam-mail-prediction
+```text
+http://localhost:5173
 ```
 
-2. Open the Jupyter Notebook:
+## Example
 
-```bash
-jupyter notebook Spam_Mail_Prediction.ipynb
+**Spam:**
+
+```text
+Congratulations! You have won a FREE iPhone. Click the link now to claim your prize!
 ```
 
-3. Run the cells step by step to preprocess data, extract features, train models, and evaluate performance.
+**Ham:**
 
-## Dataset
-The dataset used in this project consists of emails labeled as spam or non-spam. Ensure the dataset is placed in the appropriate directory before running the notebook.
+```text
+Hey, are we meeting tomorrow at 10 AM?
+```
 
-## Model Performance
-Different machine learning models are trained and evaluated using metrics such as accuracy, precision, recall, and F1-score.
+## Author
 
-## Contributing
-Feel free to fork this repository and contribute by submitting pull requests. Suggestions and improvements are always welcome!
+**Ramsaran**
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
