@@ -1,6 +1,4 @@
-Yes. Keep the README focused on what a recruiter or interviewer actually needs. Copy the entire block below and replace your current `README.md`.
 
-````markdown
 # Spam Mail Detection
 
 A machine learning web application that classifies email messages as **Spam** or **Ham (Not Spam)**.
@@ -105,8 +103,6 @@ Congratulations! You have won a FREE iPhone. Click the link now to claim your pr
 Hey, are we meeting tomorrow at 10 AM?
 ```
 
-## Author
 
-**Ramsaran**
 
 
