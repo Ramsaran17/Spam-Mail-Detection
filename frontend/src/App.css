@@ -1,0 +1,280 @@
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #eef4ff 0%, #f7f9fc 50%, #edf2ff 100%);
+}
+
+.background-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.6;
+}
+
+.shape-one {
+  width: 350px;
+  height: 350px;
+  background: #b8d0ff;
+  top: -140px;
+  left: -100px;
+}
+
+.shape-two {
+  width: 300px;
+  height: 300px;
+  background: #d5c4ff;
+  bottom: -120px;
+  right: -100px;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 42px;
+  border-radius: 24px;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 20px 60px rgba(31, 55, 95, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 26px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.header h1 {
+  margin: 0;
+  color: #18263d;
+  font-size: 36px;
+}
+
+.header p {
+  max-width: 600px;
+  margin: 12px auto 0;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.header strong {
+  color: #334155;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 10px;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 18px;
+  resize: vertical;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  outline: none;
+  color: #1e293b;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: 0.2s;
+}
+
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+textarea:disabled {
+  background: #f8fafc;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.check-button {
+  flex: 1;
+  min-height: 52px;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.check-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
+}
+
+.clear-button {
+  min-width: 100px;
+  min-height: 52px;
+  padding: 0 20px;
+  border-radius: 12px;
+  color: #475569;
+  background: #eef2f7;
+}
+
+.clear-button:hover:not(:disabled) {
+  background: #e2e8f0;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.result-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.result span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.result h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.spam {
+  color: #b42318;
+  background: #fff1f0;
+  border: 1px solid #ffd4d1;
+}
+
+.spam .result-icon {
+  color: #b42318;
+  background: #ffd4d1;
+}
+
+.ham {
+  color: #087443;
+  background: #ecfdf3;
+  border: 1px solid #c5f3d5;
+}
+
+.ham .result-icon {
+  color: #087443;
+  background: #c5f3d5;
+}
+
+.error {
+  color: #9a3412;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.error .result-icon {
+  color: #9a3412;
+  background: #fed7aa;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px 14px;
+  }
+
+  .container {
+    padding: 28px 20px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .clear-button {
+    width: 100%;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+}
